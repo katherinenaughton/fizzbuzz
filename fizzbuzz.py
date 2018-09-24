@@ -51,18 +51,17 @@ buzz=int(input("For multiples of what number shall we print 'Buzz'? "))
 for i in range(1,num+1):
     flag=False
     for j in range(1,num+1):
-        if j*fizz*buzz==i:
-            print("FizzBuzz")
-            flag=True
-            break
-        elif j*fizz==i:
+        if j*fizz==i:
             print("Fizz")
             flag=True
-            break
         elif j*buzz==i:
             print("Buzz")
             flag=True
-            break
+        elif j*fizz*buzz==i:
+            print("FizzBuzz")
+            flag=True
+        elif fizz*buzz==i:
+            flag==True
     if flag==False:
         print(i)
     
