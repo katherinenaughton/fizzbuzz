@@ -57,11 +57,12 @@ for i in range(1,num+1):
         elif j*buzz==i:
             print("Buzz")
             flag=True
+        elif j*fizz and j*buzz==i:
+            flag==True
         elif j*fizz*buzz==i:
             print("FizzBuzz")
             flag=True
-        elif fizz*buzz==i:
-            flag==True
+       
     if flag==False:
         print(i)
     
