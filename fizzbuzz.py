@@ -45,26 +45,17 @@ Fizz
 Buzz
 """
 num=int(input("How many numbers shall we print? "))
-fizz=int(input("For multiples of what number shall we print 'Fizz'? "))
-buzz=int(input("For multiples of what number shall we print 'Buzz'? "))
+f=int(input("For multiples of what number shall we print 'Fizz'? "))
+b=int(input("For multiples of what number shall we print 'Buzz'? "))
 
 for i in range(1,num+1):
-    flag=False
-    for j in range(1,num+1):
-        if j*fizz*buzz==i:
-            print("FizzBuzz")
-            flag=True
-        elif j*fizz==1 and j*buzz==i:
-            print("FizzBuzz")
-            flag==True
-        elif j*fizz==i:
-            print("Fizz")
-            flag=True
-        elif j*buzz==i:
-            print("Buzz")
-            flag=True
-        
-      
-    if flag==False:
+    if i%f==0 or if i%b==0:
+        if i%f==0:
+            print("Fizz", end="")
+        if i%b==0:
+            print("Buzz", end="")
+        print()
+    
+    if not i%f==0  and if not i%b==0:
         print(i)
     
